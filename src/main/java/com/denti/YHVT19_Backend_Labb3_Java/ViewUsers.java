@@ -10,13 +10,18 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+//This class contains the code for viewing the users in the database.
 public class ViewUsers {
 
+	/*
+	 * This method prints the users from the database.
+	 */
 	public void viewUsers() {
 
 		ArrayList<User> userList = new ArrayList<>();
 
-		String url = "http://localhost:8080/YHVT19_Backend_Labb2_G/rest/UserService/viewusers";
+		// Note the port 8090 below:
+		String url = "http://localhost:8090/YHVT19_Backend_Labb2_G/rest/UserService/viewusers";
 		try {
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
